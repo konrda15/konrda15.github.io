@@ -12,7 +12,7 @@ farben = {
   basis: "#ffd700",
   fbp: "#01b0f1",
   doep: "#b91023",
-  graz: "#808080",
+  graz: "#2e8b57",
   default: "#808080",
   default2: "#a0a0a0",
 };
