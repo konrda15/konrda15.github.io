@@ -30,12 +30,12 @@ li button {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 10px;
+  padding: 10px 8px;
   text-decoration: none;
   border: none;
 
   background-color: white; /* Green */
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .btn-active {
@@ -50,7 +50,7 @@ li select {
   border: none;
   display: block;
   text-align: center;
-  padding: 14px 10px;
+  padding: 10px 8px;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -71,7 +71,7 @@ li select:hover {
 }
 
 .paddingright {
-  padding-right: 40px;
+  padding-right: 30px;
 }
 
 .hidden {
@@ -101,4 +101,12 @@ h2 {
 
 #map {
   background-color: white;
+}
+
+table {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 16px;
 }

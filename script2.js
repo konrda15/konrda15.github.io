@@ -42,7 +42,7 @@ const transparenz = document.querySelector(".transparenz");
 const linecolor = document.querySelector(".line-color");
 const bezirksgrentenBtn = document.querySelector(".bezirke-grenzen");
 const hintergrundBtn = document.querySelector(".hintergrund");
-//const kleinparteienBtn = document.querySelector(".kleinparteien");
+const kleinparteienBtn = document.querySelector(".kleinparteien");
 
 btnErsterPlatz.addEventListener("click", () => {
   globalMode = 0;
@@ -214,7 +214,7 @@ function drawButtons() {
 // Creating map options
 var mapOptions = {
   center: [47.073, 15.441],
-  zoom: 12.5,
+  zoom: 12.3,
   wheelPxPerZoomLevel: 400,
   zoomSnap: 0.01,
 };
@@ -399,7 +399,6 @@ function getResultColor(feature, placement) {
       erg = erg.sort((a, b) => {
         return b[1] - a[1];
       });
-      console.log(erg);
 
       let winner = erg[placement - 1][0];
 
