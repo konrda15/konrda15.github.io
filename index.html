@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="benis" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+  </head>
+
+  <body>
+    <div class="menu ersteZeile">
+      <ul>
+        <li><button class="btn erster-platz">Erster Platz</button></li>
+        <li><button class="btn zweiter-platz">Zweiter Platz</button></li>
+        <li class="paddingright">
+          <button class="btn dritter-platz">Dritter Platz</button>
+        </li>
+        <li class="paddingright">
+          <button class="btn parteiergebnis">Parteiergebnis</button>
+        </li>
+        <li><button class="btn wahlbeteiligung">Wahlbeteiligung</button></li>
+      </ul>
+    </div>
+    <div class="menu zweiteZeile">
+      <ul>
+        <li class="select-wrapper paddingright">
+          <select id="parteiauswahl">
+            <option>ÖVP</option>
+            <option>FPÖ</option>
+            <option>SPÖ</option>
+            <option>KPÖ</option>
+            <option>GRÜNE</option>
+            <option>NEOS</option>
+            <option>ERDE</option>
+            <option>WIR</option>
+            <option>PIRATEN</option>
+            <option>HC</option>
+            <option>BASIS</option>
+            <option>FBP</option>
+            <option>DÖP</option>
+            <option>GRAZ</option>
+          </select>
+          <i class="arrow down"></i>
+        </li>
+        <li><button class="btn ergebnis">Ergebnis</button></li>
+        <li class="paddingright">
+          <button class="btn stimmen">Stimmen</button>
+        </li>
+        <li><button class="btn verlauf">Verlauf</button></li>
+        <li><button class="btn top10">Top 10%</button></li>
+        <li><button class="btn top50">Top 50%</button></li>
+        <li><button class="btn top90">Top 90%</button></li>
+        <li><button class="btn vergleich2017">Vergleich 2017</button></li>
+      </ul>
+    </div>
+
+    <div id="map" style="width: 800px; height: 800px"></div>
+
+    <div class="menu letzteZeile">
+      <ul>
+        <li><button class="btn transparenz">Transparenz</button></li>
+        <li><button class="btn line-color">Linienfarbe</button></li>
+        <li><button class="btn bezirke-grenzen">Bezirksgrenzen</button></li>
+        <li><button class="btn hintergrund">Hintergrund</button></li>
+        <!--<li>
+          <button class="btn kleinparteien">Kleinparteien in Popups</button>
+        </li>-->
+      </ul>
+    </div>
+
+    <script src="leaflet/leaflet.js"></script>
+    <script src="aktuell.js"></script>
+    <script src="wahlergebnis.js"></script>
+    <script src="wahlinfos.js"></script>
+    <script src="wahl2017.js"></script>
+    <script src="bezirksgrenzen.js"></script>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
