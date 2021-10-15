@@ -1,0 +1,161 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+}
+
+.letzteZeile ul li button {
+  padding: 2px 15px;
+}
+
+li button {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 8px;
+  text-decoration: none;
+  border: none;
+
+  background-color: white; /* Green */
+  font-size: 14px;
+}
+
+.btn-active {
+  background-color: rgb(96, 182, 252);
+}
+
+.btn-disabled {
+  color: #808080;
+}
+
+li select {
+  border: none;
+  display: block;
+  text-align: center;
+  padding: 10px 8px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(173, 218, 255);
+}
+
+li button:hover {
+  background-color: rgb(173, 218, 255);
+}
+
+.btn-disabled:hover {
+  background-color: white;
+}
+
+li select:hover {
+  background-color: rgb(173, 218, 255);
+}
+
+.paddingright {
+  padding-right: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.info2017 {
+  color: grey;
+}
+
+.diffpos {
+  color: #008000;
+}
+
+.diffneg {
+  color: #ff0000;
+}
+
+td {
+  white-space: nowrap;
+}
+
+h2 {
+  padding: 0;
+  margin: 5px 0px;
+}
+
+#map {
+  background-color: white;
+}
+
+table {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 700px) {
+  #map {
+    width: 100vw;
+    height: 100vw;
+  }
+  .menu {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #map {
+    width: 700px;
+    height: 700px;
+  }
+  .menu {
+    width: 700px;
+  }
+}
+
+.bottom-line {
+  display: none;
+}
+
+.cluster-table {
+  margin-top: 15px;
+  font-family: sans-serif;
+}
+
+.cluster-table table th {
+  min-width: 50px;
+}
+
+.cluster-table table td {
+  text-align: center;
+}
+
+.map-input-div {
+  z-index: 4000;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid rgb(161, 161, 161);
+  background-color: white;
+  font-weight: bold;
+}
+.map-input-div span {
+  margin-right: 5px;
+}
+.clustercount {
+  width: 45px;
+  pointer-events: auto;
+}

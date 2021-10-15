@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Sprengelkarte" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="clustermap/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+
+    <script src="leaflet/leaflet.js"></script>
+    <script src="aktuell.js"></script>
+    <script src="wahlergebnis.js"></script>
+    <script src="wahlinfos.js"></script>
+    <script src="wahl2017.js"></script>
+    <script src="bezirksgrenzen.js"></script>
+    <script src="cluster_data/ac/ac_cluster2.js"></script>
+    <script src="cluster_data/ac/ac_cluster3.js"></script>
+    <script src="cluster_data/ac/ac_cluster4.js"></script>
+    <script src="cluster_data/ac/ac_cluster5.js"></script>
+    <script src="cluster_data/ac/ac_cluster6.js"></script>
+    <script src="cluster_data/ac/ac_cluster7.js"></script>
+    <script src="cluster_data/ac/ac_cluster8.js"></script>
+    <script src="cluster_data/ac/ac_cluster9.js"></script>
+    <script src="cluster_data/ac/ac_cluster10.js"></script>
+  </head>
+
+  <body>
+    <div id="map">
+      <div class="map-input-div leaflet-top leaflet-right">
+      <span>Anzahl Cluster:</span>
+      <input type="number" min="2" max="10" value="2" class="clustercount"></input>
+      </div>
+    </div>
+
+    <div class="menu letzteZeile">
+      <ul>
+        <li><button class="btn transparenz">Transparenz</button></li>
+        <li><button class="btn line-color">Linienfarbe</button></li>
+        <li><button class="btn bezirke-grenzen">Bezirksgrenzen</button></li>
+        <li><button class="btn hintergrund">Hintergrund</button></li>
+        <!--<li>
+          <button class="btn kleinparteien">Kleinparteien in Popups</button>
+        </li>-->
+      </ul>
+    </div>
+    <div class="cluster-table">
+
+    </div>
+    <script src="clustermap/script2.js"></script>
+  </body>
+</html>
