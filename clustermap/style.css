@@ -124,6 +124,7 @@ h2 {
     min-width: 40px;
     max-width: calc(100vw / 9);
     overflow: hidden;
+    word-wrap: break-word;
   }
 }
 
