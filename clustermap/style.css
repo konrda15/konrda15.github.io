@@ -115,6 +115,14 @@ h2 {
   .menu {
     width: 100vw;
   }
+  .modal-content {
+    margin: 10vw 5vw;
+
+    width: 80vw;
+  }
+  .cluster-table table th {
+    min-width: 40px;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -125,6 +133,15 @@ h2 {
   .menu {
     width: 700px;
   }
+
+  .modal-content {
+    margin: 150px 44px;
+
+    width: 600px;
+  }
+  .cluster-table table th {
+    min-width: 60px;
+  }
 }
 
 .bottom-line {
@@ -134,10 +151,6 @@ h2 {
 .cluster-table {
   margin-top: 15px;
   font-family: sans-serif;
-}
-
-.cluster-table table th {
-  min-width: 60px;
 }
 
 .cluster-table table td {
@@ -216,10 +229,8 @@ h2 {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 150px 44px;
   padding: 20px;
   border: 1px solid #888;
-  width: 600px; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
