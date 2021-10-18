@@ -25,10 +25,30 @@
   </head>
 
   <body>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Anmerkungen</h2>
+        <ul>
+          <li>Der hier verwendete Clustering-Algorithmus unterteilt die einzelnen Sprengel in die jeweiligen Cluster auf Basis ihrer Ähnlichkeit zueinander</li>
+          <li>Vor allem bei einer geringen Anzahl an Clustern können die Sprengelergebnisse innerhalb eines Clusters relativ stark variieren.</li>
+          <li>Die Zahlen in der Tabelle beschreiben das durchschnittliche Sprengelergebnis im jeweiligen Cluster, nicht das Gesamtergebnis davon.</li>
+          <li>Am aussagekräftigsten ist meiner Meinung nach die Unterteilung in 4-6 Cluster.</li>
+          <li>Die Farben der Cluster wurden willkürlich gewählt und haben daher keine Bedeutung</li>
+          <li>Die Stimmen der vorgezogenen Wahl und der Briefwahl wurden hier nicht berücksichtigt, da man diese keinem Sprengel zuordnen kann.</li>
+
+        </ul>
+      </div>
+    </div>
+
     <div id="map">
       <div class="map-input-div leaflet-top leaflet-right">
-      <span>Anzahl Cluster:</span>
-      <input type="number" min="2" max="10" value="2" class="clustercount"></input>
+        <span>Anzahl Cluster:</span>
+        <input type="number" min="2" max="10" value="2" class="clustercount"></input>
+      </div>
+      <div class="map-info-div leaflet-bottom leaflet-left">
+        <button class="info-button">?</input>
       </div>
     </div>
 

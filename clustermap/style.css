@@ -1,4 +1,4 @@
-ul {
+.menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -6,11 +6,11 @@ ul {
   background-color: #ffffff;
 }
 
-li {
+.menu li {
   float: left;
 }
 
-li a {
+.menu li a {
   display: block;
   color: black;
   text-align: center;
@@ -22,7 +22,7 @@ li a {
   padding: 2px 15px;
 }
 
-li button {
+.menu li button {
   display: block;
   color: black;
   text-align: center;
@@ -42,7 +42,7 @@ li button {
   color: #808080;
 }
 
-li select {
+.menu li select {
   border: none;
   display: block;
   text-align: center;
@@ -50,11 +50,11 @@ li select {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.menu li a:hover {
   background-color: rgb(173, 218, 255);
 }
 
-li button:hover {
+.menu li button:hover {
   background-color: rgb(173, 218, 255);
 }
 
@@ -62,7 +62,7 @@ li button:hover {
   background-color: white;
 }
 
-li select:hover {
+.menu li select:hover {
   background-color: rgb(173, 218, 255);
 }
 
@@ -146,7 +146,7 @@ h2 {
 
 .map-input-div {
   z-index: 4000;
-  margin: 5px;
+  margin: 10px;
   padding: 5px;
   border: 2px solid rgb(161, 161, 161);
   background-color: white;
@@ -162,4 +162,77 @@ h2 {
 
 .vergleich-2017 {
   display: none;
+}
+
+.map-info-div {
+  z-index: 4000;
+  margin: 10px;
+  padding: 0;
+  border: 2px solid rgb(161, 161, 161);
+  background-color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+
+  border-radius: 50%;
+}
+
+.info-button {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+
+  pointer-events: auto;
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+
+  border-radius: 50%;
+}
+.info-button:hover {
+  background-color: #e0e0e0;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  font-family: sans-serif;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 150px 44px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 600px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
