@@ -116,15 +116,20 @@ h2 {
     width: 100vw;
   }
   .modal-content {
-    margin: 10vw 5vw;
+    margin: 10vw 8vw;
     font-size: 12px;
     width: 80vw;
+    padding: 10px;
   }
   .cluster-table table th {
     min-width: 40px;
     max-width: calc(100vw / 9);
     overflow: hidden;
     word-wrap: break-word;
+  }
+
+  body {
+    margin: 0px 0px;
   }
 }
 
@@ -138,12 +143,17 @@ h2 {
   }
 
   .modal-content {
-    margin: 150px 44px;
+    margin: 150px 38px;
     font-size: 16px;
     width: 600px;
+    padding: 20px;
   }
   .cluster-table table th {
     min-width: 60px;
+  }
+
+  body {
+    margin: 8px 8px;
   }
 }
 
@@ -232,7 +242,6 @@ h2 {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  padding: 20px;
   border: 1px solid #888;
 }
 

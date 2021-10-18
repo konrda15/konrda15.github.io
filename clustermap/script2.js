@@ -423,7 +423,7 @@ function getClusterStats() {
 }
 
 function drawClusterTable(clusterStats, clusterStats17) {
-  console.log(clusterStats17);
+  //console.log(clusterStats17);
   content = `<table>
   <tr>
   <th>Cluster</th>`;
