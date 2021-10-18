@@ -273,6 +273,7 @@ function getClusterStats() {
 
   //für jeden cluster ausführen
   let clusterStats = [];
+  let clusterStats17 = [];
   for (let i = 0; i < globalClusterCount; i++) {
     clusterStats.push({
       wahlbeteiligung: 0,
@@ -284,6 +285,15 @@ function getClusterStats() {
       kpoe: 0,
       neos: 0,
     });
+    clusterStats17.push({
+      oevp: 0,
+      fpoe: 0,
+      spoe: 0,
+      gruene: 0,
+      kpoe: 0,
+      neos: 0,
+    });
+    //not used currently
     let cmax = {
       wahlbeteiligung: 0,
       oevp: 0,
@@ -293,6 +303,7 @@ function getClusterStats() {
       kpoe: 0,
       neos: 0,
     };
+    //not used currently
     let cmin = {
       wahlbeteiligung: 0,
       oevp: 100,
@@ -311,7 +322,17 @@ function getClusterStats() {
       kpoe: 0,
       neos: 0,
     };
+    //not used currently
+    let csum17 = {
+      oevp: 0,
+      fpoe: 0,
+      spoe: 0,
+      gruene: 0,
+      kpoe: 0,
+      neos: 0,
+    };
     let count = 0;
+    let count17 = 0;
     let wahlberechtigte = 0;
     //alle einträge der clusterdaten durchsuchen
     for (let sc = 0; sc < cluster_data.clusteringResults.length; sc++) {
@@ -341,12 +362,24 @@ function getClusterStats() {
             //alle parteien durcharbeiten
             for (let pi = 0; pi < parteien.length; pi++) {
               let ergebnis =
-                wahlergebnis[se][parteien[pi]] /
-                (wahlergebnis[se].gueltig + wahlergebnis[se].ungueltig);
+                wahlergebnis[se][parteien[pi]] / wahlergebnis[se].gueltig;
               let partei = parteien[pi];
               csum[partei] += ergebnis;
               cmax[partei] = cmax[partei] < ergebnis ? ergebnis : cmax[partei];
               cmin[partei] = cmin[partei] > ergebnis ? ergebnis : cmin[partei];
+
+              //2017
+              for (let se17 = 0; se17 < wahl2017.length; se17++) {
+                if (wahl2017[se17].id == wahlergebnis[se].id) {
+                  if (partei == "oevp")
+                    //only increment once
+                    count17++;
+                  let ergebnis17 =
+                    wahl2017[se17][partei] / wahl2017[se17].gueltig;
+                  csum17[partei] += ergebnis17;
+                  break;
+                }
+              }
             }
 
             break;
@@ -380,13 +413,17 @@ function getClusterStats() {
         min: min,
         max: max,
       };
+      let avg17 = csum17[partei] / count17;
+      avg17 = Math.trunc(avg17 * 100) / 1;
+      clusterStats17[i][partei] = { avg: avg17 };
     }
     clusterStats[i].wahlberechtigte = wahlberechtigte;
   }
-  drawClusterTable(clusterStats);
+  drawClusterTable(clusterStats, clusterStats17);
 }
 
-function drawClusterTable(clusterStats) {
+function drawClusterTable(clusterStats, clusterStats17) {
+  console.log(clusterStats17);
   content = `<table>
   <tr>
   <th>Cluster</th>`;
@@ -403,9 +440,19 @@ function drawClusterTable(clusterStats) {
     content += `<td style="background-color:${clusterColors[c]}"></td>`;
 
     for (let p = 0; p < parteien.length; p++) {
+      diff =
+        clusterStats[c][parteien[p]].avg - clusterStats17[c][parteien[p]].avg;
+      diffclass = "";
+      if (diff > 0) {
+        diffclass = "diffpos";
+        diff = "+" + diff;
+      } else if (diff < 0) {
+        diffclass = "diffneg";
+      }
       content += `<td>
         <span class="table-entry top-line" >${clusterStats[c][parteien[p]].avg}%
         </span>
+        <span class="table-entry vergleich-2017 ${diffclass}"">${diff}</span>
         <span class="table-entry bottom-line" >${
           clusterStats[c][parteien[p]].min
         }%-${clusterStats[c][parteien[p]].max}%

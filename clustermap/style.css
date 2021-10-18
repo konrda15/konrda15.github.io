@@ -137,7 +137,7 @@ h2 {
 }
 
 .cluster-table table th {
-  min-width: 50px;
+  min-width: 60px;
 }
 
 .cluster-table table td {
@@ -158,4 +158,8 @@ h2 {
 .clustercount {
   width: 45px;
   pointer-events: auto;
+}
+
+.vergleich-2017 {
+  display: none;
 }
