@@ -90,6 +90,7 @@ var mapOptions = {
 
 // Creating a map object
 var map = new L.map("map", mapOptions);
+setMapZoom();
 map.doubleClickZoom.disable();
 // Creating a Layer object
 var layer = new L.TileLayer(
@@ -533,9 +534,9 @@ function setMapZoom() {
   if (window.innerWidth > 700) map.setZoom(12.3);
   else if (window.innerWidth > 600) {
     map.setZoom(12);
-  } else if (window.innerWidth > 600) {
-    map.setZoom(11.5);
   } else if (window.innerWidth > 500) {
+    map.setZoom(11.5);
+  } else if (window.innerWidth > 400) {
     map.setZoom(11);
   }
 }
