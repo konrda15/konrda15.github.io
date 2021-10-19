@@ -528,3 +528,16 @@ function componentToHex(c) {
 function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
+
+function setMapZoom() {
+  if (window.innerWidth > 700) map.setZoom(12.3);
+  else if (window.innerWidth > 600) {
+    map.setZoom(12);
+  } else if (window.innerWidth > 600) {
+    map.setZoom(11.5);
+  } else if (window.innerWidth > 500) {
+    map.setZoom(11);
+  }
+}
+
+window.addEventListener("resize", setMapZoom);
