@@ -51,7 +51,11 @@ const kleinparteienBtn = document.querySelector(".kleinparteien");
 const clusterTableDiv = document.querySelector(".cluster-table");
 
 inputClusterCount.addEventListener("input", () => {
-  if (isNaN(inputClusterCount.value)) inputClusterCount.value = 2;
+  if (inputClusterCount.value.length === 0) {
+    inputClusterCount.value = "";
+    return;
+  }
+
   if (inputClusterCount.value > 10) inputClusterCount.value = 10;
   else if (inputClusterCount.value < 2) inputClusterCount.value = 2;
   globalClusterCount = inputClusterCount.value;
